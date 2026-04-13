@@ -1,0 +1,39 @@
+export const Tickets_STATUSES = {
+    TODO: "TODO",
+    IN_PROGRESS: "IN-PROGRESS",
+    DONE: "DONE",
+} as const;
+
+export const Tickets_PRIORITIES = {
+    LOW: "low",
+    MEDIUM: "medium",
+    HIGH: "high",
+} as const;
+
+export const CARD_STYLE = {
+    TODO: Tickets_STATUSES.TODO,
+    PROGRESS: Tickets_STATUSES.IN_PROGRESS,
+    DEFAULT: "default",
+    PRIMARY: "primary",
+    DONE: Tickets_STATUSES.DONE
+} as const;
+
+export type Ticketstatus = (typeof Tickets_STATUSES)[keyof typeof Tickets_STATUSES];
+export type TicketsPriority =
+    (typeof Tickets_PRIORITIES)[keyof typeof Tickets_PRIORITIES];
+
+export type CardStyle =
+    (typeof CARD_STYLE)[keyof typeof CARD_STYLE];
+
+export interface TicketsDataMock {
+    id: number;
+    name: string;
+    status: Ticketstatus;
+    priority: TicketsPriority
+}
+
+export interface Board {
+    id: string;
+    title: string,
+    status: Ticketstatus
+}
