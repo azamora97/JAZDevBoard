@@ -3,7 +3,7 @@
 Proyecto curso de React Avanzado
 
 1. Clonar el repositorio:
-   git clone
+   git clone https://github.com/azamora97/JAZDevBoard
 2. Ingresar a la carpeta del proyecto:
    cd jaz-devboard
 3. Instalar los modulos de node ejecutando el siguiente comando:
